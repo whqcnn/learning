@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-int numb(int k)
+int is_prime(int k)
 {
     int n = 2;
-    for (n = 2; n < k - 1; ++n)
+    for (n = 2; n * n <= k; ++n)
     {
         if (k % n == 0)
-            return -1;
+            return 0;
     }
-    return k;
+    return 1;
 }
 
 int main()
@@ -16,8 +16,8 @@ int main()
     int n = 3;
     int m = 1;
 
-    for (n = 3; n < 1000000; n++) {
-        if (numb(n) == n)
+    for (n = 3; n < 10000000; n = n + 2) {
+        if (is_prime(n))
             m++;
     }
     printf ("%d\n", m);
