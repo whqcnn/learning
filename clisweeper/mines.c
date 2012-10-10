@@ -91,7 +91,6 @@ void number(struct stone mines[][10])
                 if (0 <= (x) && x <= 9 && 0 <= (y+1) && (y+1) <= 9
                     && mines[x][y+1].value != -1)
                     mines[x][y+1].value += 1;
-                if (mines[x+1][y-1].value != -1 && 
                 if (0 <= (x+1) && (x+1) <= 9 && 0 <= (y-1) && (y-1) <= 9
                     && mines[x+1][y-1].value != -1)
                     mines[x+1][y-1].value += 1;
