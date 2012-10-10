@@ -74,39 +74,51 @@ void number(struct stone mines[][10])
     {
         for (x = 0; x < 10; ++x)
         {
-            if (mines[x][y].value == -1) {
-                if (mines[x-1][y-1].value != -1)
+            if (mines[x][y].value == -1)
+            {
+                if (mines[x-1][y-1].value != -1 && 0 <= (x-1) <= 9 && 0 <= (y-1) <= 9)
                     mines[x-1][y-1].value += 1;
-                if (mines[x-1][y].value != -1)
+                if (mines[x-1][y].value != -1 && 0 <= (x-1) <= 9 && 0 <= (y) <= 9)
                     mines[x-1][y].value += 1;
-                if (mines[x-1][y+1].value != -1)
+                if (mines[x-1][y+1].value != -1 && 0 <= (x-1) <= 9 && 0 <= (y+1) <= 9)
                     mines[x-1][y+1].value += 1;
-                if (mines[x][y-1].value != -1)
+                if (mines[x][y-1].value != -1 && 0 <= (x) <= 9 && 0 <= (y-1) <= 9)
                     mines[x][y-1].value += 1;
-                if (mines[x][y+1].value != -1)
+                if (mines[x][y+1].value != -1 && 0 <= (x) <= 9 && 0 <= (y+1) <= 9)
                     mines[x][y+1].value += 1;
-                if (mines[x+1][y-1].value != -1)
+                if (mines[x+1][y-1].value != -1 && 0 <= (x+1) <= 9 && 0 <= (y-1) <= 9)
                     mines[x+1][y-1].value += 1;
-                if (mines[x+1][y].value != -1)
+                if (mines[x+1][y].value != -1 && 0 <= (x+1) <= 9 && 0 <= (y) <= 9)
                     mines[x+1][y].value += 1;
-                if (mines[x+1][y+1].value != -1)
-                    mines[x+1][y+1].value += 1; }
+                if (mines[x+1][y+1].value != -1 && 0 <= (x+1) <= 9 && 0 <= (y+1) <= 9)
+                    mines[x+1][y+1].value += 1; 
+            }
         }
     }
 }
 
 void pp(struct stone mines[][10], int x, int y)
 {
-    if (mines[x][y].value == 0){
-        mines[x-1][y-1].is_open = 1;
-        mines[x-1][y].is_open = 1;
-        mines[x-1][y+1].is_open = 1;
-        mines[x][y-1].is_open = 1;
-        mines[x][y].is_open = 1;
-        mines[x][y+1].is_open = 1;
-        mines[x+1][y-1].is_open = 1;
-        mines[x+1][y].is_open = 1;
-        mines[x+1][y+1].is_open = 1;}
+    if (mines[x][y].value == 0)
+    {
+        if (0 <= (x-1) <=9 && 0 <= (y-1) <= 9)
+            mines[x-1][y-1].is_open = 1;
+        if (0 <= (x-1) <=9 && 0 <= (y) <= 9)
+            mines[x-1][y].is_open = 1;
+        if (0 <= (x-1) <=9 && 0 <= (y+1) <= 9)
+            mines[x-1][y+1].is_open = 1;
+        if (0 <= (x) <=9 && 0 <= (y-1) <= 9)
+            mines[x][y-1].is_open = 1;
+            mines[x][y].is_open = 1;
+        if (0 <= (x) <=9 && 0 <= (y+1) <= 9)
+            mines[x][y+1].is_open = 1;
+        if (0 <= (x+1) <=9 && 0 <= (y-1) <= 9)
+            mines[x+1][y-1].is_open = 1;
+        if (0 <= (x+1) <=9 && 0 <= (y) <= 9)
+            mines[x+1][y].is_open = 1;
+        if (0 <= (x+1) <=9 && 0 <= (y+1) <= 9)
+            mines[x+1][y+1].is_open = 1;
+    }
     if (mines[x-1][y-1].value == 0 && mines[x-1][y-1].is_open != 1)
         pp(mines, (x - 1), (y - 1));
     if (mines[x-1][y].value == 0 && mines[x-1][y].is_open != 1)
@@ -122,4 +134,5 @@ void pp(struct stone mines[][10], int x, int y)
     if (mines[x+1][y].value == 0 && mines[x+1][y].is_open != 1)
         pp(mines, (x + 1), (y - 1));
     if (mines[x+1][y+1].value == 0 && mines[x+1][y+1].is_open != 1)
-        pp(mines, (x + 1), (y - 1)); }
+        pp(mines, (x + 1), (y - 1));
+}
