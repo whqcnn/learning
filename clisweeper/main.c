@@ -25,7 +25,8 @@ int main()
         for (x = 0; x < 10; x++)
             for (y = 0; y < 10; y++)
                 mines[x][y].is_open = 1;
-        printf("\nGAME OVER\n");
+        printf("\n嘣 BOM 嘣\n你被炸了!!!\n");
         print_mines(mines);
+        printf("\nGAME OVER\n");
     }
 }
