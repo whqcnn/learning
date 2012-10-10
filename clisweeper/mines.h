@@ -7,4 +7,5 @@ struct stone
 void init_mines();
 void place_mines();
 void number();
+void pp();
 void print_mines();

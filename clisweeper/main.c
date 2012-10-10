@@ -8,18 +8,24 @@ int main()
     place_mines(mines);
     number(mines);
     int x, y;
-    scanf("%d%d", &x, &y);
+    printf("请输入坐标(如：2，3):\n");
+    scanf("%d,%d", &x, &y);
     while (mines[x][y].value != -1)
     {
-        mines[x][y].is_open = 1;
+        if (mines[x][y].value == 0)
+            pp (mines, x, y);
+        else
+            mines[x][y].is_open = 1;
         print_mines(mines);
-        scanf("%d%d", &x, &y);
+        printf("请输入坐标(如：2，3):\n");
+        scanf("%d,%d", &x, &y);
     }
     if (mines[x][y].value == -1)
     {
         for (x = 0; x < 10; x++)
             for (y = 0; y < 10; y++)
                 mines[x][y].is_open = 1;
+        printf("\nGAME OVER\n");
         print_mines(mines);
     }
 }
