@@ -12,6 +12,7 @@ void get_random_x_y(int *x, int *y)
 void print_mines(struct stone mines[][T])
 {
     int x = Z;
+    int i = Z;
     int y = Z;
     for (y = Z; y < T; ++y)
     {
@@ -25,10 +26,14 @@ void print_mines(struct stone mines[][T])
                     printf("%d ", mines[x][y].value);
             }
             else
+            {
+                i++;
                 printf("■ ");
+            }
         }
         printf("\n");
     }
+    g = i;
 }
 
 void init_mines(struct stone mines[][T])

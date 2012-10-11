@@ -5,6 +5,7 @@ struct stone
 };
 #define Z 0
 #define T 10
+int g;
 
 void init_mines();
 void place_mines();
