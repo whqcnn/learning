@@ -35,7 +35,7 @@ int main()
     if (mines[x][y].value == -1)
     {
         for (x = 0; x < 10; x++)
-            for (y = 0; y < 10; y++)
+           for (y = 0; y < 10; y++)
                 mines[x][y].is_open = 1;
         printf("\n嘣 BOM 嘣\n你被炸了!!!\n");
         print_mines(mines);

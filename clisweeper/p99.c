@@ -10,5 +10,8 @@ int main()
     {
         printf("%d\n", (int)(drand48() * 5.5));
     }
+    char c;
+    c = 65;
+    printf("*%c*", c);
 }
 
