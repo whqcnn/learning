@@ -1,6 +1,5 @@
-learning  git
+Learn Programming
+=================
 
-==============
-
-
-This is a project that 学习git。
+Hello, I am whqcnn,  
+I am learing programing here.
