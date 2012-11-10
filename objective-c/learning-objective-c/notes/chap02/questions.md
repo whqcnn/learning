@@ -25,4 +25,6 @@
     (`Cocoa`对所有的函数、常量和类型名称都添加了`NS`前缀，这个前缀说明函数来自`Cocoa`而不是其他工具包。此工具包还被称为`NextSTEP`, `NS`是它的缩写。苹果公司没有破坏`NextSTEP`编写代码的兼容性，所以继续使用。）
 
 
-6. What is the defference between `NSString` and C-style String `char s[] = "hello strings"` ?
+6. What is the defference between `NSString` and C-style String `char s[] = "hello strings"` ?  （`NSString` 和 `C`风格中的字符串`hello string`有什么不同？）
+
+    `NSString`元素有许多打包特性：告知其长度；将自身与其它字符串比较；将自身转换为整型值或浮点值等是`C`风格字符串无法实现的。
