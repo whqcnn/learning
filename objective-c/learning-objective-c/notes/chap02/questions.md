@@ -33,10 +33,12 @@
 `NSString`元素有许多打包特性：告知其长度；将自身与其它字符串比较；将自身转换为整型值或浮点值等是`C`风格字符串无法实现的。
 
 **7**. What defference between `#include` and `#import` ?
+       (`#include`和`#import`有什么区别？）
 
+`#import`可保证文件只被包含一次，而不论此命令实际上在那个文件中出现多少次。而`#include`则无法做到。
 
 **8**. What is the result of the follow code:
-
+      （下面代码的结果是什么：）
 ```c
 #include <stdio.h>
 int main()
@@ -46,18 +48,25 @@ int main()
 }
 ```
 
+`b = 1`.
 
 **9**. What is the result of the follow code:
+      （下面代码的结果是什么：）
 
 ```objective-c
 BOOL b = 13;
-NSLog(@"b = %d", aaa);
+NSLog(@"b = %d", b);
 ```
 
+`b = 13`
 
 **10**. How many bytes does `int` and `bool` have? Write some code to show it.
+        (`int`和`bool`类占多少个字节，编写一些起代码显示它。）
 
+`int`占`4`个字节、`bool`类占`1`个字节。
 
 **11**. How to print `"hello"` and `@" world"` at together with NSLog?
+       (如何用`NSLog`一起打印 `"hello"` 和 `@" world"` ）
 
+NSLog(@"\"hello\",@\"world!\"");
 
