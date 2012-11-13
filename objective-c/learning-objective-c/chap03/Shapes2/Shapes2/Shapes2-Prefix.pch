@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Shapes2' target in the 'Shapes2' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
