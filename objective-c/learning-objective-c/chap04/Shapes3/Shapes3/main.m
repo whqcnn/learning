@@ -1,6 +1,6 @@
 //
 //  main.m
-//  Shapes2
+//  Shapes3
 //
 //  Created by whqcnn on 11/14/12.
 //  Copyright (c) 2012 whqcnn. All rights reserved.
@@ -12,7 +12,8 @@ typedef enum
 {
     kRedColor,
     kGreenColor,
-    kBlueColor
+    kBlueColor,
+    kYellowColor
 }ShapeColor;
 
 typedef struct
@@ -34,6 +35,10 @@ NSString *colorName (ShapeColor color)
             
         case kGreenColor:
             colorName = @"green";
+            break;
+            
+        case kYellowColor:
+            colorName = @"yellow";
             break;
             
         default:
@@ -94,7 +99,7 @@ NSString *colorName (ShapeColor color)
 {
     if (c == kRedColor)
     {
-        c = kGreenColor;
+        c = kBlueColor;
     }
     
     [super setFillColor: c];
@@ -119,6 +124,16 @@ NSString *colorName (ShapeColor color)
 
 @implementation Rectangle
 
+-(void) setFillColor:(ShapeColor) c
+{
+    if (c == kBlueColor)
+    {
+        c = kYellowColor;
+    }
+    
+    [super setFillColor: c];
+}
+
 -(void) draw
 {
     NSLog(@"drawing a Rectangle at (%d %d %d %d) in %@",
@@ -137,6 +152,16 @@ NSString *colorName (ShapeColor color)
 //---------------------------------------------
 
 @implementation Egg
+
+-(void) setFillColor:(ShapeColor) c
+{
+    if (c == kYellowColor)
+    {
+        c = kRedColor;
+    }
+    
+    [super setFillColor: c];
+}
 
 -(void) draw
 {
@@ -198,11 +223,10 @@ int main(int argc, const char * argv[])
     
     ShapeRcet rcet3 = {30, 40, 50, 60};
     shapes[3] = [Egg new];
-    [shapes[3] setFillColor: kRedColor];
+    [shapes[3] setFillColor: kYellowColor];
     [shapes[3] setBounds: rcet3];
     
     drawShapes(shapes, 4);
     
     return 0;
 }
-
