@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Car1' target in the 'Car1' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
