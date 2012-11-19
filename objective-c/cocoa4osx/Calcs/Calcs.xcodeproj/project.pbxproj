@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DA77E5416592B4B00DD7E09 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA77E5316592B4B00DD7E09 /* Cocoa.framework */; };
+		7DA77E5E16592B4B00DD7E09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DA77E5C16592B4B00DD7E09 /* InfoPlist.strings */; };
+		7DA77E6016592B4B00DD7E09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA77E5F16592B4B00DD7E09 /* main.m */; };
+		7DA77E6416592B4B00DD7E09 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7DA77E6216592B4B00DD7E09 /* Credits.rtf */; };
+		7DA77E6716592B4B00DD7E09 /* CalcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA77E6616592B4B00DD7E09 /* CalcAppDelegate.m */; };
+		7DA77E6A16592B4C00DD7E09 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA77E6816592B4C00DD7E09 /* MainMenu.xib */; };
+		7DA77E721659C94A00DD7E09 /* Calc1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA77E711659C94A00DD7E09 /* Calc1.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7DA77E4F16592B4B00DD7E09 /* Calcs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA77E5316592B4B00DD7E09 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7DA77E5616592B4B00DD7E09 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7DA77E5716592B4B00DD7E09 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7DA77E5816592B4B00DD7E09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DA77E5B16592B4B00DD7E09 /* Calcs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calcs-Info.plist"; sourceTree = "<group>"; };
+		7DA77E5D16592B4B00DD7E09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DA77E5F16592B4B00DD7E09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DA77E6116592B4B00DD7E09 /* Calcs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calcs-Prefix.pch"; sourceTree = "<group>"; };
+		7DA77E6316592B4B00DD7E09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7DA77E6516592B4B00DD7E09 /* CalcAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalcAppDelegate.h; sourceTree = "<group>"; };
+		7DA77E6616592B4B00DD7E09 /* CalcAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalcAppDelegate.m; sourceTree = "<group>"; };
+		7DA77E6916592B4C00DD7E09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7DA77E701659C94A00DD7E09 /* Calc1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calc1.h; sourceTree = "<group>"; };
+		7DA77E711659C94A00DD7E09 /* Calc1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calc1.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DA77E4C16592B4B00DD7E09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA77E5416592B4B00DD7E09 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DA77E4416592B4B00DD7E09 = {
+			isa = PBXGroup;
+			children = (
+				7DA77E5916592B4B00DD7E09 /* Calcs */,
+				7DA77E5216592B4B00DD7E09 /* Frameworks */,
+				7DA77E5016592B4B00DD7E09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DA77E5016592B4B00DD7E09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DA77E4F16592B4B00DD7E09 /* Calcs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DA77E5216592B4B00DD7E09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DA77E5316592B4B00DD7E09 /* Cocoa.framework */,
+				7DA77E5516592B4B00DD7E09 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DA77E5516592B4B00DD7E09 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DA77E5616592B4B00DD7E09 /* AppKit.framework */,
+				7DA77E5716592B4B00DD7E09 /* CoreData.framework */,
+				7DA77E5816592B4B00DD7E09 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7DA77E5916592B4B00DD7E09 /* Calcs */ = {
+			isa = PBXGroup;
+			children = (
+				7DA77E6516592B4B00DD7E09 /* CalcAppDelegate.h */,
+				7DA77E6616592B4B00DD7E09 /* CalcAppDelegate.m */,
+				7DA77E701659C94A00DD7E09 /* Calc1.h */,
+				7DA77E711659C94A00DD7E09 /* Calc1.m */,
+				7DA77E6816592B4C00DD7E09 /* MainMenu.xib */,
+				7DA77E5A16592B4B00DD7E09 /* Supporting Files */,
+			);
+			path = Calcs;
+			sourceTree = "<group>";
+		};
+		7DA77E5A16592B4B00DD7E09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DA77E5B16592B4B00DD7E09 /* Calcs-Info.plist */,
+				7DA77E5C16592B4B00DD7E09 /* InfoPlist.strings */,
+				7DA77E5F16592B4B00DD7E09 /* main.m */,
+				7DA77E6116592B4B00DD7E09 /* Calcs-Prefix.pch */,
+				7DA77E6216592B4B00DD7E09 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DA77E4E16592B4B00DD7E09 /* Calcs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DA77E6D16592B4C00DD7E09 /* Build configuration list for PBXNativeTarget "Calcs" */;
+			buildPhases = (
+				7DA77E4B16592B4B00DD7E09 /* Sources */,
+				7DA77E4C16592B4B00DD7E09 /* Frameworks */,
+				7DA77E4D16592B4B00DD7E09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calcs;
+			productName = Calcs;
+			productReference = 7DA77E4F16592B4B00DD7E09 /* Calcs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DA77E4616592B4B00DD7E09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Calc;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = whqcnn;
+			};
+			buildConfigurationList = 7DA77E4916592B4B00DD7E09 /* Build configuration list for PBXProject "Calcs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DA77E4416592B4B00DD7E09;
+			productRefGroup = 7DA77E5016592B4B00DD7E09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DA77E4E16592B4B00DD7E09 /* Calcs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DA77E4D16592B4B00DD7E09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA77E5E16592B4B00DD7E09 /* InfoPlist.strings in Resources */,
+				7DA77E6416592B4B00DD7E09 /* Credits.rtf in Resources */,
+				7DA77E6A16592B4C00DD7E09 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DA77E4B16592B4B00DD7E09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DA77E6016592B4B00DD7E09 /* main.m in Sources */,
+				7DA77E6716592B4B00DD7E09 /* CalcAppDelegate.m in Sources */,
+				7DA77E721659C94A00DD7E09 /* Calc1.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7DA77E5C16592B4B00DD7E09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DA77E5D16592B4B00DD7E09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7DA77E6216592B4B00DD7E09 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DA77E6316592B4B00DD7E09 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7DA77E6816592B4C00DD7E09 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DA77E6916592B4C00DD7E09 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DA77E6B16592B4C00DD7E09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7DA77E6C16592B4C00DD7E09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7DA77E6E16592B4C00DD7E09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calcs/Calcs-Prefix.pch";
+				INFOPLIST_FILE = "Calcs/Calcs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7DA77E6F16592B4C00DD7E09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Calcs/Calcs-Prefix.pch";
+				INFOPLIST_FILE = "Calcs/Calcs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DA77E4916592B4B00DD7E09 /* Build configuration list for PBXProject "Calcs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DA77E6B16592B4C00DD7E09 /* Debug */,
+				7DA77E6C16592B4C00DD7E09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DA77E6D16592B4C00DD7E09 /* Build configuration list for PBXNativeTarget "Calcs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DA77E6E16592B4C00DD7E09 /* Debug */,
+				7DA77E6F16592B4C00DD7E09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DA77E4616592B4B00DD7E09 /* Project object */;
+}
