@@ -25,6 +25,11 @@ int main(int argc, const char * argv[])
             NSNumber *numberToPrint = [array objectAtIndex:i];
             NSLog(@"The number at index %d is %@", i, numberToPrint);
         }
+
+        const char *foo = "Hello world!";
+        NSString *bar;
+        bar = [NSString stringWithUTF8String:foo];
+        NSLog(@"%@", bar);
     }
     return 0;
 }
