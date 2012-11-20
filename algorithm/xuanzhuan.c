@@ -1,9 +1,10 @@
 #include <stdio.h>
+//顺时针旋转矩阵90度。
 
 #define HANG 9
 #define LIE  9
 
-void print_sz(int sz[][LIE])
+void print_sz(int sz[][LIE])       //打印矩阵
 {
     int x, y;
     for (x = 0; x < LIE; x++)
@@ -18,7 +19,7 @@ void print_sz(int sz[][LIE])
     printf("\n");
 }
 
-void xuanzhuan(int sz[][LIE])
+void xuanzhuan(int sz[][LIE])        //旋转矩阵
 {
     int i, j, n;
     int m = 0;
@@ -38,7 +39,7 @@ void xuanzhuan(int sz[][LIE])
     }
 }
 
-int main()
+int main()                         //main 主函数
 {
     int sz[HANG][LIE];
     int i, j;
