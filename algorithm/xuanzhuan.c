@@ -1,16 +1,15 @@
+// 顺时针旋转矩阵90度。
 #include <stdio.h>
-//顺时针旋转矩阵90度。
 
-#define HANG 9
-#define LIE  9
+#define SIZE 9
 
-void print_sz(int sz[][LIE])       //打印矩阵
+void print_sz(int sz[][SIZE])       // 打印矩阵
 {
     int x, y;
-    for (x = 0; x < LIE; x++)
+    for (x = 0; x < SIZE; x++)
     {
         printf("[");
-        for (y = 0; y < HANG; y++)
+        for (y = 0; y < SIZE; y++)
         {
             printf("%3d", sz[x][y]);
         }
@@ -19,21 +18,21 @@ void print_sz(int sz[][LIE])       //打印矩阵
     printf("\n");
 }
 
-void xuanzhuan(int sz[][LIE])        //旋转矩阵
+void xuanzhuan(int sz[][SIZE])        // 旋转矩阵
 {
     int i, j, n;
     int m = 0;
 
-    for (i = 0; i < LIE/2; i++)
+    for (i = 0; i < SIZE/2; i++)
     {
         m++;
-        for (j = i; j < HANG-m; j++)
+        for (j = i; j < SIZE-m; j++)
         {
             n = sz[i][j];
-            sz[i][j] = sz[HANG-1-j][i];
-            sz[HANG-1-j][i] = sz[HANG-1-i][LIE-1-j];
-            sz[HANG-1-i][LIE-1-j] = sz[j][LIE-1-i];
-            sz[j][LIE-1-i] = n;
+            sz[i][j] = sz[SIZE-1-j][i];
+            sz[SIZE-1-j][i] = sz[SIZE-1-i][SIZE-1-j];
+            sz[SIZE-1-i][SIZE-1-j] = sz[j][SIZE-1-i];
+            sz[j][SIZE-1-i] = n;
         }
         printf("\n");
     }
@@ -41,12 +40,12 @@ void xuanzhuan(int sz[][LIE])        //旋转矩阵
 
 int main()                         //main 主函数
 {
-    int sz[HANG][LIE];
+    int sz[SIZE][SIZE];
     int i, j;
     int n = 1;
-    for (i = 0; i < LIE; i++)
+    for (i = 0; i < SIZE; i++)
     {
-        for (j = 0; j < HANG; j++)
+        for (j = 0; j < SIZE; j++)
         {
             sz[i][j] = n;
             n++;
