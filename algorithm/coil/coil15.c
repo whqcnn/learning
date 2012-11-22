@@ -2,10 +2,12 @@
 #define H  9
 #define L  10
 
-int jisuan(int nn[][L], int x, int y)
+int judge(int nn[][L], int x, int y)
 {
-    int i, j, n;
-    int k = 0;
+    printf("%d%d", x, y);
+    int i, j, _x, _y;
+    int k = 1;
+    int n = 1;
     int mm[H][L];
     for (i = 0; i < H; i++)
     {
@@ -14,36 +16,61 @@ int jisuan(int nn[][L], int x, int y)
             mm[i][j] = 0;
         }
     }
-    while (n != 15)
+    mm[x][y] = 1;
+    i = x;
+    j = y;
+    while (k != 15)
     {
-        for (i = x; i < H && mm[i][y] != 1 && nn[i][y] != 'X' ; i++)
+        if ((i+1) < H && mm[i+1][j] != 1 && nn[i+1][j] != 'X')
         {
-            k++;
-            mm[i][y] = 1;
+            for (i = i+1; i < H && mm[i][j] != 1 && nn[i][j] != 'X' ; i++)
+            {
+                printf("<1>");
+                k++;
+                mm[i][j] = 1;
+            }
+            i--;
         }
-        for (i = x; i > 0 && mm[i][y] != 1 && nn[i][y] != 'X' ; i--)
+
+        if ((i-1) >= 0 && mm[i-1][j] != 1 && nn[i-1][j] != 'X')
         {
-            k++;
-            mm[i][y] = 1;
+            for (i = i-1; i >= 0 && mm[i][j] != 1 && nn[i][j] != 'X' ; i--)
+            {
+                printf("<2>");
+                k++;
+                mm[i][j] = 1;
+            }
+            i++;
         }
-        for (j = y; j < L && mm[x][j] != 1 && nn[x][j] != 'X' ; j++)
+
+        if ((j+1) < L && mm[i][j+1] != 1 && nn[i][j+1] != 'X')
         {
-            k++;
-            mm[x][j] = 1;
+            for (j = j+1; j < L && mm[i][j] != 1 && nn[i][j] != 'X' ; j++)
+            {
+                printf("<3>");
+                k++;
+                mm[i][j] = 1;
+            }
+            j--;
         }
-        for (j = y; j > 0 && mm[x][j] != 1 && nn[x][j] != 'X' ; j--)
+
+        if ((j-1) >= 0 && mm[i][j-1] != 1 && nn[i][j-1] != 'X')
         {
-            k++;
-            mm[x][j] = 1;
+            for (j = j-1; j >= 0 && mm[i][j] != 1 && nn[i][j] != 'X' ; j--)
+            {
+                printf("<4>");
+                k++;
+                mm[i][j] = 1;
+            }
+            j++;
         }
-        printf("%d ", k);
         if (n == k)
             break;
         else
             n = k;
     }
-    printf("\n");
 
+    printf("  *%d*\n\n", k);
     return k;
 }
 
@@ -68,7 +95,7 @@ int main()
     {
         for (j = 0; j < L; j++)
         {
-            if (nn[i][j] == 'X')
+            if (nn[i][j] == '.')
             {
                 k++;
             }
@@ -76,21 +103,23 @@ int main()
         }
         printf("\n");
     }
+    printf("%d\n", k);
+
     for (i = 0; i < H; i++)
     {
         for (j = 0; j < L; j++)
         {
-            m = jisuan(nn, i, j);
-            if (m == k)
+            if (nn[i][j] == '.')
             {
-                break;
+                m = judge(nn, i, j);
             }
+            if (m == k)
+                break;
         }
         if (m == k)
-        {
             break;
-        }
     }
+    m = judge(nn, 0, 0);
     if (m == k)
         printf("%d %d\n", i, j);
     else
