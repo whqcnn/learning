@@ -6,7 +6,10 @@
 **2**. How many .h files in it? With what Unix commands to check out this?
 (在目录下有多少个.h文件？用什么命令来查看它？)
 
-有`140`个.h文件。 `find *.h -type f | wc -l`
+有`140`个.h文件。 `find *.h -type f | wc -l` (此命令只能找当前文件夹下的，不能
+找当前文件夹下子目录的）
+
+`grep "" . -r --include=*.{h,c,m,py} | wc -l` (此命令可以找当前及子目录下的所有以.h .c .m .py的文件)
 
 
 **3**. How many lines in all these .h files? Use what command to check it?
