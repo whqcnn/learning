@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define H  12
-#define L  13
+#define L  14
 
 int left(int nn[][L], int mm[][L], int x, int y);
 int right(int nn[][L], int mm[][L], int x, int y);
@@ -258,7 +258,7 @@ int judge(int nn[][L], int x, int y, int s)
 //主函数
 int main()
 {
-    char a[H*L] = "................................XX..X...XX............X.XXX..X.X.X.....X....X....XX...XX........X......XXXXX.X..X.X....XX.XX.X..X......X.....X........X.....";
+    char a[H*L] = "XX..X....X....X..X..XX......X....X....X.....X....X....X.....X...............X.X..X.....XX.X....X.....XX....X.........X...XX...XXXX....X...........X...X.XX............XX";
     int k = 0;
     int m = 0;
     int n = 0;
