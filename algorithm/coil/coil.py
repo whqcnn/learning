@@ -1,23 +1,22 @@
 import re
-import urllib2
+import urllib.request
 
 NAME = "whqcnn"
 PASSWORD = "521521"
 
-def get_level_string(n):
-    url = "http://www.hacker.org/coil/index.php?gotolevel=%d&name=%s&password=%s" % (
-        n, NAME, PASSWORD)
+def get_level_string(url):
+    url = open("path.data").read()
+    f = urllib.request.urlopen(url)
+    page = f.read()
+    print("Level %s" % re.search(b'Level: (\d+)', page).group(1))
 
-    page = urllib2.urlopen(url)
-    content = page.read()
-    result = re.search(r'<param name="FlashVars" value="([^"]+)" />', content)
-    if result:
-        f = open('result.txt', 'w')
-        f.write(result.group(1))
-        f.write("\n");
-        f.close()
-        print result.group(1)
-    else:
-        print 'not found'
+    pattern = b'<param name="FlashVars" value="x=(\d+)&y=(\d+)&board=([\.X]+)" />'
+    result = re.search(pattern, page)
+    if not result:
+        print("not found")
+        return
+    print("%s" % result.group(1).decode('ascii'), file=open('x.data', 'w'))
+    print("%s" % result.group(2).decode('ascii'), file=open('y.data', 'w'))
+    print("%s" % result.group(3).decode('ascii'), file=open('board.data', 'w'))
 
-get_level_string(15)
+get_level_string(url)
