@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+size_t count = 0;
+
 size_t fibo(size_t n)
 {
     int k = 0;
@@ -20,12 +22,22 @@ size_t fibo(size_t n)
     return k;
 }
 
+size_t fibo2(size_t n)
+{
+    count ++;
+    if (n == 1)
+        return 1;
+    if (n == 2)
+        return 2;
+    return fibo2(n - 1) + fibo2(n - 2);
+}
+
 int main()
 {
     int i;
 
-    for (i = 1; i <= 10; ++i)
-        printf("%ld ", fibo(i));
+    printf("%ld ", fibo2(40));
 
     printf("\n");
+    printf("%d \n", count);
 }
